@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  data_preprocessor:
+    container_name: data_preprocessor
+    build: ./data-preprocessor
+    command: python -u main.py --reload
+    volumes:
+      - ./data-preprocessor:/usr/src/app
+    restart: always
